@@ -1,6 +1,6 @@
 const textbar = document.getElementById('textbar')
 const searchicon = document.getElementById('searchicon')
-const error = document.getElementById("error")
+const search = document.getElementById("search")
 
 searchicon.addEventListener("click", function(){
   locationfixaftermode()
@@ -27,35 +27,50 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${locate}&lang=${lang}&
     const shown = document.getElementById('h1')
     const placeholder = document.getElementById('h2')
     if (data.cod === "404") {
-      error.classList.remove("hidden")
-      locate = ""
-      setTimeout(function() {
-        error.classList.add("hidden")
-        }, 4000);
-      
-      placeholder.classList.add("hiddenanim")
-      setTimeout(function() {
-        shown.classList.add("placeholder")
-        placeholder.classList.remove("s2")
-        placeholder.classList.add("hidden")
-        }, 1000);
-      // shown.classList.add("placeholder")
-      // placeholder.classList.remove("s2")
-      // placeholder.classList.add("hidden")
+    locate = ""
+    textbar.value = ""
+    if(lang === "pl"){
+      textbar.placeholder = "Błędna"
+    }
+    if(lang === "en"){
+      textbar.placeholder = "Incorrect"}
 
+    search.classList.add("shadow")
+    textbar.classList.remove("txt1")
+    textbar.classList.add("shadow1")
+    setTimeout(function() {
+      textbar.classList.add("txt1")
+      search.classList.remove("shadow")
+      textbar.classList.remove("shadow1")
+      }, 850);
+    
+  setTimeout(function() {
+    if(lang === "pl"){
+      textbar.placeholder = "Lokalizacja"
+    }if(lang === "en"){
+      textbar.placeholder = "Location"
+    }
+    }, 4000);
+      
+    placeholder.classList.add("hiddenanim")
+    setTimeout(function() {
+    shown.classList.add("placeholder")
+    placeholder.classList.remove("s2")
+    placeholder.classList.add("hidden")
+    }, 500);
       if (interval) clearInterval(interval);
       return;
     }  
     if (interval) clearInterval(interval);
     
     if(locate === ""){
-      
       placeholder.classList.add("hiddenanim")
       setTimeout(function() {
-        shown.classList.add("placeholder")
-        placeholder.classList.remove("s2")
-        placeholder.classList.add("hidden")
-        }, 1000);
+      shown.classList.add("placeholder")
+      placeholder.classList.remove("s2")
+      placeholder.classList.add("hidden")
+      }, 500);
+      return;
     }
     const city = data.name;
     document.getElementById("city").textContent = city;
@@ -119,16 +134,12 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${locate}&lang=${lang}&
     
     interval = setInterval(whatstime, 3000)
 
-    const a2 = document.getElementById("a2")
-    const a23 = document.getElementById("a23")
-
     shown.classList.remove("placeholder")
     placeholder.classList.add("s2")
     placeholder.classList.remove("hidden")
     setTimeout(function() {
-      placeholder.classList.remove("hiddenanim")
+    placeholder.classList.remove("hiddenanim")
       }, 1);
-    
    }) .catch(error =>{
     //console.error(error);
   })
@@ -188,7 +199,6 @@ const wtxt = document.getElementById("wtxt")
 const ttxt = document.getElementById("ttxt")
 const htxt = document.getElementById("htxt")
 
-
 let langstatus1 = localStorage.getItem("sldfndsfma832wjoejfop")
 
 if(langstatus1 === null)
@@ -199,7 +209,6 @@ if(langstatus1 === null)
   wtxt.textContent = "Wiatr"
   ttxt.textContent = "Godzina"
   htxt.textContent = "Wilgotność"
-  error.textContent = "Lokacja nie istnieje"
   langstatus1 = 0
 } 
 let langstatus = parseInt(langstatus1)
@@ -211,7 +220,6 @@ if(langstatus === 2){
   wtxt.textContent = "Wind"
   ttxt.textContent = "Time"
   htxt.textContent = "Humidity"
-  error.textContent = "Location not found"
   langstatus++
 
 }
@@ -222,7 +230,6 @@ if(langstatus === 0){
   wtxt.textContent = "Wiatr"
   ttxt.textContent = "Godzina"
   htxt.textContent = "Wilgotność"
-  error.textContent = "Lokacja nie istnieje"
 }
 
 
@@ -233,7 +240,6 @@ if(langstatus === 0){
   wtxt.textContent = "Wind"
   ttxt.textContent = "Time"
   htxt.textContent = "Humidity"
-  error.textContent = "Location not found"
   localStorage.removeItem("sldfndsfma832wjoejfop")
   localStorage.setItem("sldfndsfma832wjoejfop","2")
   localStorage.removeItem("fbdashfbskabfdkhsba87932h98o0wp")
@@ -246,7 +252,6 @@ if(langstatus === 0){
   wtxt.textContent = "Wiatr"
   ttxt.textContent = "Godzina"
   htxt.textContent = "Wilgotność"
-  error.textContent = "Lokacja nie istnieje"
   localStorage.removeItem("sldfndsfma832wjoejfop")
   localStorage.setItem("sldfndsfma832wjoejfop","0")
   localStorage.removeItem("fbdashfbskabfdkhsba87932h98o0wp")
@@ -317,11 +322,10 @@ const footerdate = new Date();
 const footeryear = footerdate.getFullYear();
 document.getElementById("year").textContent = footeryear;
 //////////fix
-const fix = document.getElementById("search")
 setTimeout(function() {
-fix.classList.remove("hidden")
-fix.classList.add("search")
-}, 70);
+search.classList.remove("hidden")
+search.classList.add("search")
+}, 50);
 
 
 
