@@ -101,6 +101,7 @@ nav .text{
 }
 .shadow{
     box-shadow: inset 0px 0px 25px red;
+    box-shadow: 0 0 10px 6px rgba(255, 0, 0, 0.3);
 }
 .shadow1{
     background-color: rgba(255, 0, 0, 0.03);
