@@ -244,7 +244,7 @@ footer{
     margin-left: 0.1em;
 }
 
-video {
+.video {
     position: fixed;
     top: -50%;
     left: -15%;
@@ -264,7 +264,7 @@ video {
    }
   }
   @media(min-height: 720px) {
-   video{
+   .video{
     top: -40%;
    }
     nav{
@@ -289,7 +289,7 @@ video {
 
   }
   @media(min-height: 760px) {
-    video{
+    .video{
      top: -30%;
     }
     .s1{
@@ -310,7 +310,7 @@ video {
 
    }
    @media(min-height: 830px) {
-    video{
+    .video{
         top: -20%;
     }
     .s2{
@@ -318,7 +318,7 @@ video {
     }
    }
    @media(min-height: 900px) {
-    video{
+    .video{
         top: 0%;
     }
     .s1{
@@ -429,7 +429,7 @@ video {
 
    @media(min-width: 1500px){
 
-   video{
+   .video{
     left: 0;
    }
 
