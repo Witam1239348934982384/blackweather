@@ -288,11 +288,11 @@ const footerdate = new Date();
 const footeryear = footerdate.getFullYear();
 document.getElementById("year").textContent = footeryear;
 //////////fix
-//const fix = document.getElementById("search")
-//setTimeout(function() {
-//fix.classList.remove("hidden")
-//fix.classList.add("search")
-//}, 70);
+const fix = document.getElementById("search")
+setTimeout(function() {
+fix.classList.remove("hidden")
+fix.classList.add("search")
+}, 50);
 
 
 
