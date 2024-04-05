@@ -28,6 +28,7 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${locate}&lang=${lang}&
     const placeholder = document.getElementById('h2')
     if (data.cod === "404") {
       error.classList.remove("hidden")
+      locate = ""
       setTimeout(function() {
         error.classList.add("hidden")
         }, 4000);
