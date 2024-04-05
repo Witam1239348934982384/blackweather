@@ -36,13 +36,12 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${locate}&lang=${lang}&
       textbar.placeholder = "Incorrect"}
 
     search.classList.add("shadow")
-    textbar.classList.remove("txt1")
-    textbar.classList.add("shadow1")
+    textbar.classList.add("txt1")
+    
     setTimeout(function() {
-      textbar.classList.add("txt1")
       search.classList.remove("shadow")
-      textbar.classList.remove("shadow1")
-      }, 850);
+      textbar.classList.remove("txt1")
+      }, 1300);
     
   setTimeout(function() {
     if(lang === "pl"){
@@ -50,7 +49,7 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${locate}&lang=${lang}&
     }if(lang === "en"){
       textbar.placeholder = "Location"
     }
-    }, 4000);
+    }, 1500);
       
     placeholder.classList.add("hiddenanim")
     setTimeout(function() {
