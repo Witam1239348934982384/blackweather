@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.both{
+    position: absolute;
+    right: 1%;
+    top: 1%;
+}
+
+.pl{
+width: 4em;
+height: 3em;
+}
+.eng{
+width: 4em;
+height: 3em;
+} 
+
+.scam{
+    position: absolute;
+    bottom: 1%;
+    left: 1.5%;
+    font-size: 0.55em;
+}
+
+
+body,html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    background-color: #000;
+    color: gray;
+    font-family: "Reddit Mono", monospace;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    
+}
+
+.gif{
+    position: relative;
+    right: 0.9%;
+}
+
+.message{
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    font-size: 0.7em;
+
+}
+
+img{
+    width: 5em;
+    height: 5em;
+}
+
+
+.hidden{
+    display: none;
+}
+
+.no{
+    background-color: #2e2e2e;
+    width: 4.2em;
+    height: 2.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.3em;
+    position: absolute;
+    top: 60%;
+    left: 55%;
+    transition: 0.1s ease-in-out;
+}
+a {
+    text-decoration: none; 
+    color: inherit;
+  }
+.yes{
+    background-color: #6e4030;
+    width: 4.2em;
+    height: 2.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.3em;
+    position: absolute;
+    top: 60%;
+    right: 55%;
+    cursor: pointer;
+    
+}
+
+
+
+.table{
+    width:85%;
+    height: 14em;
+    background-color: #000;
+    border-radius: 1em;
+    border: 0.12em solid #2e2e2e;
+    box-shadow: 0 0 10px 6px rgba(46, 46, 46, 0.5);
+    display: flex;
+    justify-content: center;
+}
+.main{
+    font-size: 24px;
+    position: relative;
+    top: 25%;
+    
+}
+
+@media(min-width: 650px){
+    .table{
+        height: 20em;
+        width: 65%;
+    }
+   .yes{
+    width: 5.2em;
+    height: 3.3em;
+   }
+   .no{
+    width: 5.2em;
+    height: 3.3em;
+    
+   }
+   .main{
+    font-size: 2.5em;
+   }
+   .tyes{
+ font-size: 1.3em;
+   }
+   .tno{
+    font-size: 1.3em;
+   }
+}
+@media(min-width: 1000px){
+    .gif,img{
+        height: 7em;
+        width: 7em;
+    }
+}
+
+
+
+@media(min-width: 1150px){
+ .table{
+    width: 50%;
+ }
+}
+@media(min-width: 1500px){
+    .table{
+       width: 44em;
+       height: 25em;
+    }
+    .yes{
+        width: 6.2em;
+        height: 3.5em;
+       }
+       .no{
+        width: 6.2em;
+        height: 3.5em;
+   }
+   .tyes{
+    font-size: 1.5em;
+      }
+      .tno{
+       font-size: 1.5em;
+      }
+      .main{
+        font-size: 2.85em;
+      }
+      .gif,img{
+        height: 9em;
+        width: 9em;
+    }
+}
+@media(max-height: 290px){
+    body{
+        padding-bottom: 1.5em;
+    }
+}
+@media(max-height: 300px){
+    .table{
+        padding-bottom: 7em;
+        height: 10.5em;
+    }
+}
+@media(max-height: 440px){
+    .table{
+        height: 18em;
+    }
+}
+@media(max-height: 400px){
+    .table{
+        padding-bottom: 5em;
+        height: 12.5em;
+    }
+}
+@media(min-height: 1500px){
+    .yes{
+     top: 53%;
+    }
+    .no{
+    top: 53%;
+    }
+}
+@media(max-height: 230px){
+    .yes{
+     height:2.7em;
+     width:4.5em;
+     top: 65%;
+    }.no{
+        height:2.7em ;
+        width:4.5em ;
+        top: 65%;
+    }
+    .main{
+        font-size: 2em;
+    }
+    
+}

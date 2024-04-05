@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Weather</title>
+    <link rel="shortcut icon" href="/images/navlogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link id="css1" rel="stylesheet" href="">
+</head>
+
+<body>
+    <header>
+    <nav>
+    <a href="BlackWeather.html">
+    <img class="userselect" src="/images/navlogo.png" alt="logo">
+    <span class="text userselect">Black Weather</span>
+    </a>
+    <div class="modes">
+    <span id="langmode" class="langmode hover userselect"></span>    
+    <span id="tempmode" class="tempmode hover userselect"></span>
+    <span id="mode" class="material-symbols-outlined mode hover userselect">
+    </div>
+    </span>
+    </nav>
+    </header>
+   <main>   
+    <section class="s1">
+    <div class="hidden" id="search">    
+    <input id="textbar" placeholder="" class="txt userselect" type="text" name="search" autocomplete="off"> 
+    <span id="searchicon" class="material-symbols-outlined searchicon hover userselect">search</span>
+    </div>
+    </section>
+    <div id="h1" class="placeholder"></div>
+    <section id="h2" class="hidden">
+        <article class="a2" >
+            <div class="div1">
+                <span class="material-symbols-outlined city">
+                    location_on
+                    </span>
+                    <span class="city" id="city"></span> 
+                </div>
+            </div>
+        <div class="tdiv">
+            <div class="div2">
+                <span id="temp"></span>°
+            </div>
+            <div class="div3">
+                <span class="weathertext" id="weather"></span>
+                <img class="icon userselect" id="image" src="icons/01d.png" alt="">
+            </div>
+        </div>
+        </article>
+        <article class="a23">
+        <div class="div11">
+            <div class="wind">
+                <span class="material-symbols-outlined googleicon1">
+                    air</span><span id="wtxt"></span><span class="windjs" id="wind"></span><span id="windunit"></span>
+            </div>
+        </div>
+        <div class="div12">
+            <div  class="time">
+                <span class="material-symbols-outlined googleicon2">schedule</span>
+                <span id="ttxt"></span> </span><span class="timejs" id="timezone"></span>
+            </div>
+        </div>
+        <div class="div13">
+            <div class="humidity">
+            <span class="material-symbols-outlined googleicon3">humidity_percentage</span><span id="htxt"></span><span class="humidityjs" id="humidity"></span>%
+            </div>
+        </div>
+        </article>
+    </section>
+ </main>
+<footer class="userselect">
+Black Weather &copy <span class="year" id="year"></span>
+</footer>
+<video autoplay muted loop>
+<source src="p1.mp4" type="video/mp4">
+</video>
+<script src="/script/script.js"></script>
+</body>
+</html>
+
+
+
