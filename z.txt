@@ -1,5 +1,0 @@
-zmniejszyc logo
-zalinkowac darkmode
-naprawic tlo
-animacja
-klasa hiddenanim/ po "null" / popraw blad
