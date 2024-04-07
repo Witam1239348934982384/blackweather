@@ -326,8 +326,10 @@ search.classList.remove("hidden")
 search.classList.add("search")
 }, 50);
 
-
-
-
-
-
+//////background
+const backgroundv = document.getElementById("backgroundvideo")
+const backgroundi = document.getElementById("backgroundimg")
+setTimeout(function() {
+  backgroundv.classList.remove("hidden")
+  backgroundi.classList.add("hidden")
+  }, 3000);
