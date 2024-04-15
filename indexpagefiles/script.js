@@ -133,7 +133,8 @@ function yesanimation() {
       window.location.href = "BlackWeather.html";
   }, 3000);
    setTimeout(function() {
-      window.location.href = "BlackWeather.html";
+    logoimg.classList.remove("hidden")
+    logogif.classList.add("hidden")
   }, 2990);
 
 }
