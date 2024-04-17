@@ -17,7 +17,7 @@ let lang = "pl"
 let units = "metric"
 let interval;
 function locationfixaftermode(){
-locate = textbar.value
+locate = textbar.value.trim()
 }
 function searchfunction() {
 fetch(`https://api.openweathermap.org/data/2.5/weather?q=${locate}&lang=${lang}&appid=96c1a7a698e8862ceb07458d1fa004a7&units=${units}`) 
